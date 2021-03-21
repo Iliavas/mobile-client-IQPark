@@ -1,0 +1,26 @@
+.time-pass__container{
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #E6E5E6;
+    border-radius: 10px;
+}
+
+.my-passes__container{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap : 30px;
+}
+
+.colorize{
+    color:#3F9F2B;
+}
+
+.time-pass__col{
+    display: flex;
+    gap : 10px;
+    flex-direction: column;
+}

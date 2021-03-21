@@ -1,0 +1,74 @@
+query getTimeEvent($timeEventId:ID!) {
+  TimeEvent(id:$timeEventId) {
+    comment, checked, deadline
+  }
+}
+
+query getDispInfo($disp_id:ID!) {
+  DisposableEvent(id:$disp_id) {
+    comment,
+    used,
+    checked
+  }
+}
+
+query allTimeEvent($user_id:ID!){
+  User(id:$user_id) {
+    timeeventSet{
+      edges{
+        node{
+          checked, id
+        }
+      }
+    }
+    disposableeventSet{
+      edges{
+        node{
+          checked, id
+        }
+      }
+    }
+    staffeventSet{
+      edges{
+        node{
+          checked, id
+        }
+      }
+    }
+  }
+}
+
+mutation registration($username:String, $password:String){
+  registration(password:$password, username:$username){
+    user{
+      username, id
+    }
+  }
+}
+
+mutation login($username:String, $password:String){
+  login(password:$password, username:$username) {
+    user{
+      id
+    }
+    ok
+  }
+}
+
+mutation createTimeEvent($user_id:ID!, $comment:String){
+  createTimeEvent(userId:$user_id, comment:$comment){
+    ok
+  }
+}
+
+mutation createDispEvent($user_id:ID!, $comment:String){
+  createDisposableEvent(userId:$user_id, comment:$comment){
+    ok
+  }
+}
+
+mutation createStaff($user_id:ID!, $comment:String){
+  createStaffEvent(comment:$comment, userId:$user_id) {
+    ok
+  }
+}

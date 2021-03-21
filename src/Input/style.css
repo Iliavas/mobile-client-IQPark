@@ -1,0 +1,15 @@
+.input__container{
+    font-family: Montserrat;
+    font-weight: 600;
+    outline:none;
+    border: 1px solid #002065;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+}
+
+.ta__container{
+    padding: 10px;
+    height: 30vh;
+    width: calc(100% - 20px);
+}

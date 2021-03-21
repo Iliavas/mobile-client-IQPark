@@ -1,0 +1,18 @@
+.button__container{
+    border: none;
+    outline:none;
+    background-color: #3F9F2B;
+    color: #E6E5E6;
+    font-family: Montserrat;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 18px;
+}
+
+.reject{
+    border: 1px solid #3F9F2B;
+    color: black;
+    background-color: white;
+}
